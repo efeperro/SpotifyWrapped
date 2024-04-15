@@ -104,7 +104,7 @@ The ipynb file uploaded to the repository initializes with the installation of m
 * `kafka-python` to call Kafka into python language integration.
 * `pyspark` to create a Spark session and connect the event hub to Kafka.
 
-This section initializes the environment by installing necessary libraries and tools. This section sets the foundation for subsequent data handling and streaming tasks.
+This section initializes the environment by installing necessary libraries and tools.Then, it sets the foundation for subsequent data handling and streaming tasks.
 
 **Kafka**: the Kafka configuration simply introduces Apache Kafka, with its version along with configuration definition; ensuring all components are ready for data streaming. This includes scripts to download, install, and configure Kafka on the host system. Finally, the last step performed in the setup is the Kafka topic definition (called spotifyWrapped) to which the data will be generated (for AVRO producer and consumer to be defined within the topic), as well as the partitions and replication factor definition. For such a low volume task, the final decision defined 3 partitions, with a replication factor of 1.
 
