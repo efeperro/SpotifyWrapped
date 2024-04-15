@@ -23,7 +23,7 @@ Spotify Wrapped has become a tradition for music listeners within the Spotify pl
 
 ## <a id="item-one">Schema Definition</a>
 
-* After generating an AVRO file schema, it was concluded that the following fields are essential for properly analyzing the data generated within the AVRO record producer. You can see more information about the Kafka record producer **here**.
+* After generating an AVRO file schema, it was concluded that the following fields are essential for properly analyzing the data generated within the AVRO record producer. You can see more information about the Kafka record producer [here]((#item-six)).
 
 ### Schema:
 
@@ -183,7 +183,7 @@ artist_region_popularity_query = df \
 
 
 #### Other Considered Queries: 
-Given that Spotify is a streaming service company must create numerous analytics to better undertand the users, other queries offer really good insights. The reason these were not implemented are simply the number of queries aas a constraint, and the power of the 3 previous chosen queries. Another constraint is the unavailability to generating queries grouped by window sessions, which is further discussed in this **section**. Still, 4 of these are worth to mention:
+Given that Spotify is a streaming service company must create numerous analytics to better undertand the users, other queries offer really good insights. The reason these were not implemented are simply the number of queries aas a constraint, and the power of the 3 previous chosen queries. Another constraint is the unavailability to generating queries grouped by window sessions, which is further discussed in this [section](#item-eight). Still, 4 of these are worth to mention:
 
 1. Top Genres by Listening Duration: This query calculates the total listening duration for each genre within defined time windows. It provides insights into the popularity of different genres based on the total listening time per window.
 
@@ -214,7 +214,8 @@ At some point in the data generation, issues regarding the user id and location 
 ### Real-time Data Processing: 
 Dealing with the parameters of the constancy of record generation and volume of data in a streaming context posed challenges that were the most challenging to solve. The major challenge involves understanding the speed towards each record generation, and also making sure that the analyses have time to properly extract the records being produced to output the query. This was partially solved on some queries (only queries without time windows) since the waiting time for the query to terminate had to be adjusted.
 
-### Window Time Queries:
+#### <a id="item-eight">Window Time Queries:</a>
+
 After ensuring the consistency and integrity of both the data generation and the AVRO producer and consumer files, the window time queries correctly ran without querying the data being generated. the main assumption towards this error is the session timestamps that collide with the parameters of the window, sliding intervals, and the implementation of watermarks on selected queries. This means that the query should either be given more time to process the query, or the listening session timestamp should be edited to fit a window time query. This is the only challenge that could not be corrected, but given the assumptions, this will be soon fixed.
 
 ## Conclusion
