@@ -129,7 +129,7 @@ From the generation of 10 different queries, only 3 query analysis were chosen. 
 
 ### Query Implementations
 
-1. **Artist Engagement Metrics**: This query calculates engagement metrics for both artists and users. For artists, it aggregates the total number of plays, likes, and skips for each artist. For users, it aggregates the total number of plays, skips, and likes for each user.
+1. **Artist Engagement Metrics**: This query calculates engagement metrics for both artists and users. For artists, it aggregates the total number of plays, likes, and skips for each artist. For users, it aggregates the total number of plays and likes for each user.
 
 -  This query specifically demonstrates the total plays and likes, giving the artist an idea of the impact on users. This is a very important query due to the real analysis that artists are given regarding their listening sessions from the users interested in their music.
 
